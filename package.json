@@ -3,6 +3,7 @@
   "version": "6.9.0",
   "private": true,
   "scripts": {
+    "start": "gem install excon",
     "postinstall": "cd static && bower install"
   },
   "dependencies": {
