@@ -3,8 +3,8 @@
   "version": "6.9.0",
   "private": true,
   "scripts": {
-    "start": "gem install excon",
-    "postinstall": "cd static && bower install"
+    "postinstall": "cd static && bower install",
+    "start": "node server.js '--ws_uri=ws://3.17.177.41:8888/kurento/'"
   },
   "dependencies": {
     "minimist": "^1.1.1",
