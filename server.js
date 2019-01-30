@@ -26,7 +26,7 @@ var https = require('https');
 
 var argv = minimist(process.argv.slice(2), {
     default: {
-        as_uri: 'https://client-cam.herokuapp.com:80/',
+        as_uri: 'https://client-cam.herokuapp.com',
         ws_uri: 'ws://localhost:8888/kurento'
     }
 });
@@ -53,7 +53,7 @@ var noPresenterMessage = 'No active presenter. Try again later...';
  * Server startup
  */
 var asUrl = url.parse(argv.as_uri);
-var port = asUrl.port;
+var port = process.env.PORT || asUrl.port;
 var server = https.createServer(options, app).listen(port, function() {
     console.log('Kurento Tutorial started');
     console.log('Open ' + url.format(asUrl) + ' with a WebRTC capable browser');
