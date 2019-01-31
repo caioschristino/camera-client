@@ -2,10 +2,6 @@
   "name": "kurento-one2many-call",
   "version": "6.9.0",
   "private": true,
-  "scripts": {
-    "postinstall": "cd static && bower install",
-    "start": "node server.js --ws_uri=ws://3.17.177.41:8888/kurento/"
-  },
   "dependencies": {
     "minimist": "^1.1.1",
     "kurento-client": "Kurento/kurento-client-js",
